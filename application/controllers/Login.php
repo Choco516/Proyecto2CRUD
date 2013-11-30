@@ -9,14 +9,14 @@ class Login extends CI_Controller {
 
 	public function Autenticar()
 	{
-		$usuario= $this->input->post('usuario');
+		$email= $this->input->post('email');
 		$clave= $this->input->post('clave');
-
-		if(($usuario=="avantica") && ($clave=="123"))
+echo $clave;
+		if(($email=="avantica@gmail.com") && ($clave=="123"))
 		{
-			redirect(base_url()."Cliente");
+			echo "Hola";
+			redirect(base_url()."Administrativos");
 		}
 		$this->load->view('Login/Login');
-
 	}
 }

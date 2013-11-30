@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>
-      Ingresar clientes
+      Aula 
     </title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -22,91 +23,77 @@
     
     <style>
       
-        body {
-    padding-top: 15px;
-    font-size: 12px
-  }
-  .main {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .login-or {
-    position: relative;
-    font-size: 18px;
-    color: #aaa;
-    margin-top: 10px;
-            margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .span-or {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -2px;
-    margin-left: -25px;
-    background-color: #fff;
-    width: 50px;
-    text-align: center;
-  }
-  .hr-or {
-    background-color: #cdcdcd;
-    height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  h3 {
-    text-align: center;
-    line-height: 300%;
-  }
+        body { 
+  background: url(http://www.freefever.com/stock/futuristic-city-fondos-colores-del-arcoiris-widescreen-hd-y.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+.panel-default {
+opacity: 0.7;
+margin-top:110px;
+}
+.form-group.last { margin-bottom:0px; }
+
+#centrado{
+  margin-left: 35%;
+  width:300px;
+}
     </style>
     
   </head>
   <body>
     
-    <div class="container">
-  <div class="row">
+   <div class="container">
+    <div class="row">
+        <div id= "centrado" class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div  class="panel-heading">
+                    <span class="glyphicon glyphicon-lock"></span> Ingresar</div>
+                <div class="panel-body">
+                    <form role="form" action="<?php echo base_url();?>login/Autenticar" method="Post">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label" >
+                            Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">
+                            Clave</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Clave"  id="clave" name="clave" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"/>
+                                    Recuerdame
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
 
-    <div class="main">
-
-      <h3>Please Log In, or <a href="#">Sign Up</a></h3>
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
+                            <button type="submit" class="btn btn-success btn-sm">
+                                Entrar</button>
+                                 <button type="reset" class="btn btn-default btn-sm">
+                                limpiar</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    No Registrado? <a href="http://www.jquery2dotnet.com">Registrate aquí</a></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
-        </div>
-      </div>
-      <div class="login-or">
-        <hr class="hr-or">
-        <span class="span-or">or</span>
-      </div>
-
-      <form role="form" action="<?php echo base_url();?>login/Autenticar" method="Post">
-        <div class="form-group">
-          <label for="inputUsernameEmail">Usuario</label>
-          <input type="text" class="form-control" id="usuario" name="usuario">
-        </div>
-        <div class="form-group">
-          <a class="pull-right" href="#">Forgot password?</a>
-          <label for="inputPassword">Clave</label>
-          <input type="password" class="form-control" id="clave" name="clave">
-        </div>
-        <div class="checkbox pull-right">
-          <label>
-            <input type="checkbox">
-            Remember me </label>
-        </div>
-        <button type="submit" class="btn btn btn-primary">
-          Log In
-        </button>
-      </form>
-    
     </div>
-    
-  </div>
 </div>
     
     
