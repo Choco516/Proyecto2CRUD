@@ -24,7 +24,7 @@
     <style>
       
         body { 
-  background: url(http://www.freefever.com/stock/futuristic-city-fondos-colores-del-arcoiris-widescreen-hd-y.jpg) no-repeat center center fixed; 
+  background: url(http://freefever.com/stock/futuristic-city-fondos-colores-del-arcoiris-widescreen-hd-y.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,14 +32,14 @@
 }
 
 .panel-default {
-opacity: 0.7;
+opacity: 0.5;
 margin-top:110px;
 }
 .form-group.last { margin-bottom:0px; }
 
 #centrado{
-  margin-left: 35%;
-  width:300px;
+  margin-left: 30%;
+  width:400px;
 }
     </style>
     
@@ -90,7 +90,7 @@ margin-top:110px;
                     </form>
                 </div>
                 <div class="panel-footer">
-                    No Registrado? <a href="http://www.jquery2dotnet.com">Registrate aquí</a></div>
+                    No Registrado? <a href="http://localhost/proyecto2CRUD/index.php/Registrarse">Registrate aquí</a></div>
             </div>
         </div>
     </div>

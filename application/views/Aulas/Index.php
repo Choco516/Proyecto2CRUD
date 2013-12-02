@@ -19,36 +19,51 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
     
-    <style>
-      
-      /* http://css-tricks.com/perfect-full-page-background-image/ */
-      html {
-        /* background: url(img/6133364748_89f2365922_o.jpg) no-repeat center center fixed;
-        */
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-      
-      body {
-        padding-top: 20px;
-        font-size: 16px;
-        font-family: "Open Sans",serif;
-        background: transparent;
-      }      
-      
-      .margin-base-vertical {
-        font-family: "Open Sans",serif;
-        margin: 10px 0;
-        text-align: left;
-      }
+<style>
+  body { 
+    background: url(http://nocturnar.com/forum/attachments/escritorio/43905d1344378770-fondo-aurora-ultimate-1600x1200.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .panel-default {
+    opacity: 0.5;
+    margin-top:0px;
+  }
+
+  #centrado{
+    margin-left: 25%;
+    width:500px;
+  }
+
+  #centrado2{
+    margin-left: 29%;
+  }
+  #centrado3{
+    margin-left: 25%;
+  }
+  #centrado4{
+    margin-left: 227%;
+  }
+  #centrado5{
+    margin-left: 185%;
+  }
+  #atras{
+  margin-top: 5%;
+  margin-left: 4%;
+  width:110px;
+  opacity: 0.7;
+}
       
     </style>
     
   </head>
   <body>
-    
+    <div id="atras"class="col-lg-4">
+                            <p><a href="http://localhost/proyecto2CRUD/index.php/Principal" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Atrás</h3></a></p>
+    </div> 
     <div class="container">
       
       
@@ -56,35 +71,33 @@
 
    
         foreach ($data as $row) {            
+  
+          echo '<br><br>';
+          echo '<div class="panel panel-default" id= "centrado" class="container-fluid well span6">';
+          echo '<div class="row-fluid">';
+          echo '<div id= "centrado2" class="span2" >';
+          echo '<img src="http://www.golden5.org/golden5/golden5/iconos/aula.jpg" class="img-circle">';
+          echo '</div>';
+          echo '<div id= "centrado3" class="span8">';
+          echo '<h3>Nombre: ' . $row['Nombre']. '</h3>' ;
+          echo '<h6>Codigo: ' . $row['Codigo'] . '</h6>';
+          echo '<h6>Ubicación: ' . $row['Ubicación'] . '</h6>';
+          echo '</div>';
+          echo '<div class="span2">';
+          echo '<div class="btn-group">';
+          echo '<a id= "centrado4"class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">';
+          echo 'Action ';
+          echo '<span class="icon-cog icon-white"></span><span class="caret"></span>';
+          echo '</a>';
+          echo '<ul id= "centrado5" class="dropdown-menu">';
+          echo '<li><a href="#"><span class="icon-wrench"></span> Modificar</a></li>';
+          echo '<li><a href="#"><span class="icon-trash"></span> Eliminar</a></li>';
+          echo '</ul>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
 
-
-
-
-            echo '     <div class="row"> ';
-            echo '        <div class="col-md-6 col-md-offset-3 panel panel-default"> ';
-            echo '          <div class="media"> ';
-            echo '            <a class="pull-left" href="#"> ';
-            echo '                <img class="media-object dp img-circle" src="'.$hola.'" style="width: 100px;height:100px;"> ';
-            echo '            </a> ';
-            echo                  '<div class="btn-group pull-right">';
-            echo '                <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">';
-            echo '                    Configuraci&#243;n ';
-            echo '                    <span class="icon-cog icon-white"></span><span class="caret"></span>';
-            echo '                </a>';
-            echo '                <ul class="dropdown-menu">';
-            echo '                    <li><a href="' . base_url() . 'Aulas/Editar/' . $row['Codigo'] . '"><span class="icon-wrench"></span> Editar</a></li>';
-            echo '                    <li><a href="' . base_url() . 'Aulas/Eliminar/' . $row['Codigo'] . '"><span class="icon-trash"></span> Eliminar</a></li>';
-            echo '                </ul>';
-            echo '            </div>';
-            echo '            <div class="media-body"> ';
-            echo '                <h4 class="margin-base-vertical">' . $row['Nombre'] . ' <small></h4> ';
-            echo '                <span class="label label-default">' . $row['Codigo'] . '</span> ';
-            echo '                <span class="label label-default">' . $row['Ubicación'] . '</span> ';
-            echo '            </div>';
-            echo '          </div>';
-            echo '        </div>';
-            echo '        <!-- //main content -->';
-            echo '      </div>';
 
         }
       ?>

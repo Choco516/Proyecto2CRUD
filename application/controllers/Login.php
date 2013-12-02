@@ -11,12 +11,10 @@ class Login extends CI_Controller {
 	{
 		$email= $this->input->post('email');
 		$clave= $this->input->post('clave');
-echo $clave;
-		if(($email=="avantica@gmail.com") && ($clave=="123"))
+		if(($email=="admin@gmail.com") && ($clave=="123"))
 		{
-			echo "Hola";
-			redirect(base_url()."Administrativos");
+			redirect(base_url()."Principal");
 		}
-		$this->load->view('Login/Login');
+		$this->load->view('Principal/Index');
 	}
 }
