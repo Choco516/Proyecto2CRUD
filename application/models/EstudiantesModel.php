@@ -48,7 +48,7 @@ class EstudiantesModel extends CI_Model
         }
     }
     
-    public function Eliminar($cedula)
+    public function EliminarEstudiantes($cedula)
     {
         var_dump($cedula);
         $this->db->where('Cédula', $cedula);

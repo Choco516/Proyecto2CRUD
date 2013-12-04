@@ -53,7 +53,7 @@ margin-top:110px;
                 <div  class="panel-heading">
                     <span class="glyphicon glyphicon-lock"></span> Ingresar</div>
                 <div class="panel-body">
-                    <form role="form" action="<?php echo base_url();?>login/Autenticar" method="Post">
+                    <form role="form" action="<?php echo base_url();?>Metodos/Autenticar" method="Post">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label" >
                             Email</label>
@@ -95,7 +95,7 @@ margin-top:110px;
         </div>
     </div>
 </div>
-    
+
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js">

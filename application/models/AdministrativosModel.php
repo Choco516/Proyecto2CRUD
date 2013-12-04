@@ -48,7 +48,7 @@ class AdministrativosModel extends CI_Model
         }
     }
     
-    public function Eliminar($cedula)
+    public function EliminarAdministrativos($cedula)
     {
         var_dump($cedula);
         $this->db->where('Cédula', $cedula);

@@ -47,7 +47,7 @@ class AulasModel extends CI_Model
         }
     }
     
-    public function Eliminar($codigo)
+    public function EliminarAulas($codigo)
     {
         var_dump($codigo);
         $this->db->where('Codigo', $codigo);

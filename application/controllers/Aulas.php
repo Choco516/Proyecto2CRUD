@@ -42,21 +42,21 @@ class Aulas extends CI_Controller {
 	{
 		$id=$this->uri->segment(3);
 		$this->load->model("AulasModel");
-		$data['data']=$this->AulasModel->ObtenerAulas($aulas);
+		$data['data']=$this->AulasModel->ObtenerAulas($id);
 		$this->load->view('Aulas/Editar',$data);
 	}
 
 	public function EditarAulas()
 	{
-		$codigo=$this->input->post('codigo'); 
+		$id=$this->input->post('id'); 
 
 		$aulas=array(
 			'Codigo' => $this->input->post('codigo') ,
 			'Nombre' => $this->input->post('nombre') ,
-			'Ubicacion' => $this->input->post('ubicacion'));
+			'Ubicación' => $this->input->post('ubicacion'));
 
 		$this->load->model("AulasModel");
-		if($this->AulasModel->Editar($codigo,$aulas))
+		if($this->AulasModel->Editar($id,$aulas))
 		{
 			redirect(base_url()."Aulas");
 		}
@@ -66,12 +66,12 @@ class Aulas extends CI_Controller {
 		}
 	}
 
-	public function Eliminar()
+	public function EliminarAulas()
 	{
-		$codigo=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 
 		$this->load->model("AulasModel");
-		if($this->AulasModel->Eliminar($codigo))
+		if($this->AulasModel->EliminarAulas($id))
 		{
 			redirect(base_url()."Aulas");
 		}

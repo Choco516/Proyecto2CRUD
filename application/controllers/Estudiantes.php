@@ -38,24 +38,24 @@ class Estudiantes extends CI_Controller {
 
 	public function Editar()
 	{
-		$cedula=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 		$this->load->model("EstudiantesModel");
-		$data['data']=$this->EstudiantesModel->ObtenerEstudiantes($cedula);
+		$data['data']=$this->EstudiantesModel->ObtenerEstudiantes($id);
 		$this->load->view('Estudiantes/Editar',$data);
 	}
 
 	public function EditarEstudiantes()
 	{
-		$cedula=$this->input->post('cedula'); 
+		$id=$this->input->post('id'); 
 
-		$cedula=array(
-			'Cédula' => $this->input->post('cédula') ,
+		$estudiantes=array(
+			'Cédula' => $this->input->post('cedula') ,
 			'Nombre_Completo' => $this->input->post('nombre_completo') ,
 			'Correo' => $this->input->post('correo') ,
-			'Contraseña'=> $this->input->post('contraseña'));
+			'Contraseña'=> $this->input->post('contrasena'));
 
 		$this->load->model("EstudiantesModel");
-		if($this->EstudiantesModel->Editar($cedula,$estudiantes))
+		if($this->EstudiantesModel->Editar($id,$estudiantes))
 		{
 			redirect(base_url()."Estudiantes");
 		}
@@ -65,12 +65,12 @@ class Estudiantes extends CI_Controller {
 		}
 	}
 
-	public function Eliminar()
+	public function EliminarEstudiantes()
 	{
-		$cedula=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 
 		$this->load->model("EstudiantesModel");
-		if($this->EstudiantesModel->Eliminar($cedula))
+		if($this->EstudiantesModel->EliminarEstudiantes($id))
 		{
 			redirect(base_url()."Estudiantes");
 		}

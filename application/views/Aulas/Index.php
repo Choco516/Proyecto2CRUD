@@ -90,8 +90,8 @@
           echo '<span class="icon-cog icon-white"></span><span class="caret"></span>';
           echo '</a>';
           echo '<ul id= "centrado5" class="dropdown-menu">';
-          echo '<li><a href="#"><span class="icon-wrench"></span> Modificar</a></li>';
-          echo '<li><a href="#"><span class="icon-trash"></span> Eliminar</a></li>';
+          echo '<li><a href="' . base_url() . 'Aulas/Editar/' . $row['Codigo'] . '"><span class="icon-wrench"></span> Modificar</a></li>';
+          echo '<li><a href="' . base_url() . 'Aulas/EliminarAulas/' . $row['Codigo'] . '"><span class="icon-trash"></span> Eliminar</a></li>';
           echo '</ul>';
           echo '</div>';
           echo '</div>';

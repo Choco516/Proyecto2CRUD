@@ -43,24 +43,24 @@ class Administrativos extends CI_Controller {
 
 	public function Editar()
 	{
-		$cedula=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 		$this->load->model("AdministrativosModel");
-		$data['data']=$this->AdministrativosModel->ObtenerAdministrativos($cedula);
+		$data['data']=$this->AdministrativosModel->ObtenerAdministrativos($id);
 		$this->load->view('Administrativos/Editar',$data);
 	}
 
 	public function EditarAdministrativo()
 	{
-		$cedula=$this->input->post('cédula'); 
+		$id=$this->input->post('id'); 
 
 		$administrativos=array(
-			'Cédula' => $this->input->post('cédula') ,
+			'Cédula' => $this->input->post('cedula') ,
 			'Nombre_Completo' => $this->input->post('nombre_completo') ,
 			'Correo' => $this->input->post('correo') ,
-			'Contraseña'=> $this->input->post('contraseña'));
+			'Contraseña'=> $this->input->post('contrasena'));
 
 		$this->load->model("AdministrativosModel");
-		if($this->AdministrativosModel->Editar($cedula,$administrativos))
+		if($this->AdministrativosModel->Editar($id,$administrativos))
 		{
 			redirect(base_url()."Administrativos");
 		}
@@ -70,12 +70,12 @@ class Administrativos extends CI_Controller {
 		}
 	}
 
-	public function EliminarAdministrativo()
+	public function EliminarAdministrativos()
 	{
-		$cedula=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 
 		$this->load->model("AdministrativosModel");
-		if($this->ClienteModel->Eliminar($cedula))
+		if($this->AdministrativosModel->EliminarAdministrativos($id))
 		{
 			redirect(base_url()."Administrativos");
 		}

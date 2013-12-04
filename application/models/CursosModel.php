@@ -37,7 +37,7 @@ class CursosModel extends CI_Model
         return $query->row();
     }
     
-    public function Editar($id_curso, $cursos)
+    public function EditarCursos($id_curso, $cursos)
     {
         var_dump($id_curso);
         $this->db->where('Id_Curso', $id_curso);
@@ -48,7 +48,7 @@ class CursosModel extends CI_Model
         }
     }
     
-    public function Eliminar($id_curso)
+    public function EliminarCursos($id_curso)
     {
         var_dump($id_curso);
         $this->db->where('Id_Curso', $id_curso);

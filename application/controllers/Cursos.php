@@ -48,14 +48,14 @@ class Cursos extends CI_Controller {
 
 	public function EditarCursos()
 	{
-		$id_curso=$this->input->post('id_curso'); 
+		$id=$this->input->post('id'); 
 
 		$cursos=array(
 			'Id_Curso' => $this->input->post('id_curso') ,
 			'Carrera' => $this->input->post('carrera'));
 
 		$this->load->model("CursosModel");
-		if($this->CursosModel->Editar($id_curso,$cursos))
+		if($this->CursosModel->EditarCursos($id,$cursos))
 		{
 			redirect(base_url()."Cursos");
 		}
@@ -65,12 +65,12 @@ class Cursos extends CI_Controller {
 		}
 	}
 
-	public function Eliminar()
+	public function EliminarCursos()
 	{
 		$id_curso=$this->uri->segment(3);
 
 		$this->load->model("CursosModel");
-		if($this->CursosModel->Eliminar($id_curso))
+		if($this->CursosModel->EliminarCursos($id_curso))
 		{
 			redirect(base_url()."Cursos");
 		}

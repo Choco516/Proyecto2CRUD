@@ -69,23 +69,23 @@ margin-left: 27%;
 
         <div  class="form" class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><a href="http://localhost/proyecto2CRUD/index.php/Registrarse"><i class="glyphicon glyphicon-globe"></i></a> <a href="http://localhost/proyecto2CRUD/index.php/Registrarse">Registrarse!</a></legend>
-            <form action="#" method="post" class="form" role="form">
+            <form action="<?php echo base_url();?>Metodos/Registrar" method="post" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="Cedula" placeholder="Cédula" type="text"
-                        required autofocus />
+                    <input class="form-control" id="cedula" name="cedula" placeholder="Cédula" type="text"
+                         />
                 </div>
                 <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="nombre_completo" placeholder="Nombre" type="text"
+                    <input class="form-control" id="nombre_completo" name="nombre_completo" placeholder="Nombre" type="text"
                          />
                 </div>
             </div>
-            <input class="form-control" name="correo" placeholder="Correo" type="email" />
-            <input class="form-control" name="contraseña" placeholder="Contraseña" type="password" />
+            <input class="form-control" id="correo" name="correo" placeholder="Correo" type="email" />
+            <input class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" type="password" />
             <div class="row">
                 <div class="col-xs-6 col-md-6">
-                    <select  class="form-control">
-                        <option value="Credencial">-Credencial-</option>
+                    <font color="white">credencial</font>
+                    <select  id="credencial" name="credencial"class="form-control">
                         <option value="Administrativo">Administrativo</option>
                         <option value="Profesor">Profesor</option>
                         <option value="Estudiante">Estudiante</option>

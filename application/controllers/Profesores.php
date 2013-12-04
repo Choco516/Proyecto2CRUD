@@ -50,7 +50,7 @@ class Profesores extends CI_Controller {
 
 	public function EditarProfesores()
 	{
-		$cedula=$this->input->post('cedula'); 
+		$id=$this->input->post('id'); 
 
 		$profesores=array(
 			'Cédula' => $this->input->post('cédula') ,
@@ -59,7 +59,7 @@ class Profesores extends CI_Controller {
 			'Contraseña'=> $this->input->post('contraseña'));
 
 		$this->load->model("ProfesoresModel");
-		if($this->ProfesoresModel->Editar($cedula,$profesores))
+		if($this->ProfesoresModel->Editar($id,$profesores))
 		{
 			redirect(base_url()."Profesores");
 		}
@@ -69,12 +69,12 @@ class Profesores extends CI_Controller {
 		}
 	}
 
-	public function Eliminar()
+	public function EliminarProfesores()
 	{
-		$cedula=$this->uri->segment(3);
+		$id=$this->uri->segment(3);
 
 		$this->load->model("ProfesoresModel");
-		if($this->ProfesoresModel->Eliminar($cedula))
+		if($this->ProfesoresModel->EliminarProfesores($id))
 		{
 			redirect(base_url()."Profesores");
 		}
