@@ -5,7 +5,7 @@ class Administrativos extends CI_Controller {
 		parent::__construct();
 	}
 
-
+	//Carga el modelo y la vista de administrativos
 	public function index()
 	{
 		$this->load->model("AdministrativosModel");
@@ -13,12 +13,13 @@ class Administrativos extends CI_Controller {
 		$data['hola']="http://t1.gstatic.com/images?q=tbn:ANd9GcSq3MHYIrl_BcNMTVtXpiBi2G_B5kmILJTdwnqSTHpksBAhoQnVgQ";
 		$this->load->view('Administrativos/Index',$data);
 	}
-
+	//Carga la vista para crear administrativos
 	public function Crear()
 	{
 		$this->load->view('Administrativos/Crear');
 	}
 
+	//Método para crear administrativos
 	public function CrearAdministrativo()
 	{
 		$administrativos=array(
@@ -41,6 +42,7 @@ class Administrativos extends CI_Controller {
 		}
 	}
 
+	//Método para cargar el modelo y la vista de editar administrativos
 	public function Editar()
 	{
 		$id=$this->uri->segment(3);
@@ -49,6 +51,7 @@ class Administrativos extends CI_Controller {
 		$this->load->view('Administrativos/Editar',$data);
 	}
 
+	//Método para editar administrativos
 	public function EditarAdministrativo()
 	{
 		$id=$this->input->post('id'); 
@@ -70,6 +73,7 @@ class Administrativos extends CI_Controller {
 		}
 	}
 
+	//Método para eliminar administrativos
 	public function EliminarAdministrativos()
 	{
 		$id=$this->uri->segment(3);

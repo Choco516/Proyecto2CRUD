@@ -15,9 +15,9 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
     
 <style>
   body { 
@@ -57,19 +57,17 @@
   opacity: 0.7;
 }
       
-    </style>
+</style>
     
   </head>
   <body>
     <div id="atras"class="col-lg-4">
-                            <p><a href="http://localhost/proyecto2CRUD/index.php/Principal" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Atrás</h3></a></p>
+                            <p><a href="<?php echo base_url();?>Principal" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Atrás</h3></a></p>
     </div> 
     <div class="container">
       
-      
-      <?php
+<?php
 
-   
         foreach ($data as $row) {            
   
           echo '<br><br>';

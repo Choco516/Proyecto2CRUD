@@ -15,47 +15,49 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
-</script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
-</script>
-<![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
+    </script>
+    <![endif]-->
     
     <style>
       
         body { 
-  background: url(http://www.wallsave.com/wallpapers/2560x1600/fondos-de-color/1237569/fondos-de-color-fondo-pantalla-muralla-colores-hd-hq-p-1237569.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-            padding-top:60px; 
+          background: url(http://www.wallsave.com/wallpapers/2560x1600/fondos-de-color/1237569/fondos-de-color-fondo-pantalla-muralla-colores-hd-hq-p-1237569.jpg) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          padding-top:60px; 
         }
-.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+        .panel-body .btn:not(.btn-block) { 
+          width:120px;margin-bottom:10px; 
+        }
 
-.panel-default {
-opacity: 0.8;
-margin-top:0px;
-}
+        .panel-default {
+          opacity: 0.8;
+          margin-top:0px;
+        }
 
-#centrado{
-  margin-left: 23%;
-  width:575px;
-}
+        #centrado{
+          margin-left: 23%;
+          width:575px;
+        }
 
-#atras{
-  margin-top: 0px;
-  margin-left: 85%;
-  width:150px;
-  opacity: 0.7;
-}
+        #atras{
+          margin-top: 0px;
+          margin-left: 85%;
+          width:150px;
+          opacity: 0.7;
+        }
 
     </style>
     
   </head>
   <body>
     <div id="atras"class="col-lg-4">
-                            <p><a href="http://localhost/proyecto2CRUD/index.php/login" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</h3></a></p>
+                            <p><a href="<?php echo base_url();?>login" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</h3></a></p>
     </div>                        
 <div class="container">
     <div class="row">

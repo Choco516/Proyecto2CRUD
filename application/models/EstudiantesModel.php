@@ -8,12 +8,10 @@ class EstudiantesModel extends CI_Model
     
     function __construct()
     {
-        
-        //$query = $this->db->get('cliente');
-        // $this->output->append_output(var_dump($query));
-        
+
     }
     
+    //función para crear estudiantes
     public function Crear($estudiantes)
     {
         //$this->output->append_output(var_dump($cliente));
@@ -24,12 +22,14 @@ class EstudiantesModel extends CI_Model
         }
     }
     
+    //función para listar estudiantes
     public function ListaEstudiantes()
     {
         $query = $this->db->get('estudiantes');
         return $query->result_array();
     }
     
+    //función para obtener estudiantes
     public function ObtenerEstudiantes($cedula)
     {
         $this->db->where('Cédula', $cedula);
@@ -37,6 +37,7 @@ class EstudiantesModel extends CI_Model
         return $query->row();
     }
     
+    //función para editar estudiantes
     public function Editar($cedula, $estudiantes)
     {
         var_dump($cedula);
@@ -48,6 +49,7 @@ class EstudiantesModel extends CI_Model
         }
     }
     
+    //función para eliminar estudiantes
     public function EliminarEstudiantes($cedula)
     {
         var_dump($cedula);

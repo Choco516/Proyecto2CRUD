@@ -14,49 +14,47 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
-</script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
-</script>
-<![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
+    </script>
+    <![endif]-->
     
-    <style>
+<style>
       
-        body { 
-            background: url(http://3.bp.blogspot.com/-YlcvHvdkAPY/UWrKX3i0fAI/AAAAAAAAA-8/Vi7bjWsmBwQ/s1600/Ondas+de+colores+brillantes+muy+lindos.jpg) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            padding-top:30px; }
+  body { 
+    background: url(http://3.bp.blogspot.com/-YlcvHvdkAPY/UWrKX3i0fAI/AAAAAAAAA-8/Vi7bjWsmBwQ/s1600/Ondas+de+colores+brillantes+muy+lindos.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top:30px; 
+  }
 
-            .form {
-opacity: 0.8;
-margin-top:30px;
-margin-left: 27%;
-  width:300px;
-}
+  .form {
+    opacity: 0.8;
+    margin-top:30px;
+    margin-left: 27%;
+    width:300px;
+  }
 
-#centrado{
-  
-}
-
-.form-control { 
+  .form-control { 
     opacity: 0.8;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
-     }
-     #activar{
-        opacity: 0.7;
-  margin-top: 4%;
-  margin-left: 42.5%;
-  width:170px;
-}
+  }
+
+  #activar{
+    opacity: 0.7;
+    margin-top: 4%;
+    margin-left: 42.5%;
+    width:170px;
+  }
 
 
-    </style>
+</style>
  <body>
     <div id="activar"class="col-lg-4">
                             <p><a href="<?php echo base_url();?>Validar/validar" class="btn btn-outlined btn-block btn-primary"><span class="glyphicon glyphicon-ok-circle"></span> Activar Cuentas</h3></a></p>

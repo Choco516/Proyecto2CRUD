@@ -6,6 +6,7 @@ class Cursos extends CI_Controller {
 		parent::__construct();
 	}
 
+	//Carga el modelo y la vista de cursos
 	public function index()
 	{
 		$this->load->model("CursosModel");
@@ -14,11 +15,13 @@ class Cursos extends CI_Controller {
 		$this->load->view('Cursos/Index',$data);
 	}
 
+	//Carga la vista para crear cursos
 	public function Crear()
 	{
 		$this->load->view('Cursos/Crear');
 	}
 
+	//Método para crear cursos
 	public function CrearCursos()
 	{
 		$cursos=array(
@@ -38,6 +41,7 @@ class Cursos extends CI_Controller {
 		}
 	}
 
+	//Método para cargar el modelo y la vista de editar cursos
 	public function Editar()
 	{
 		$id_curso=$this->uri->segment(3);
@@ -46,6 +50,7 @@ class Cursos extends CI_Controller {
 		$this->load->view('Cursos/Editar',$data);
 	}
 
+	//Método para editar cursos
 	public function EditarCursos()
 	{
 		$id=$this->input->post('id'); 
@@ -65,6 +70,7 @@ class Cursos extends CI_Controller {
 		}
 	}
 
+	//Método para eliminar cursos
 	public function EliminarCursos()
 	{
 		$id_curso=$this->uri->segment(3);

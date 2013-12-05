@@ -5,7 +5,7 @@ class Principal extends CI_Controller {
 		parent::__construct();
 	}
 
-
+	//Carga la vista principal
 	public function index()
 	{
 		$this->load->view('Principal/Index');

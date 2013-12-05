@@ -5,6 +5,8 @@ class Aulas extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 	}
+
+	//Carga el modelo y la vista de aulas
 	public function index()
 	{
 		$this->load->model("AulasModel");
@@ -13,11 +15,13 @@ class Aulas extends CI_Controller {
 		$this->load->view('Aulas/Index',$data);
 	}
 
+	//Carga la vista para crear aulas
 	public function Crear()
 	{
 		$this->load->view('Aulas/Crear');
 	}
 
+	//Método para crear aulas
 	public function CrearAulas()
 	{
 		$cliente=array(
@@ -38,6 +42,7 @@ class Aulas extends CI_Controller {
 		}
 	}
 
+	//Método para cargar el modelo y la vista de editar aulas
 	public function Editar()
 	{
 		$id=$this->uri->segment(3);
@@ -46,6 +51,7 @@ class Aulas extends CI_Controller {
 		$this->load->view('Aulas/Editar',$data);
 	}
 
+	//Método para editar aulas
 	public function EditarAulas()
 	{
 		$id=$this->input->post('id'); 
@@ -66,6 +72,7 @@ class Aulas extends CI_Controller {
 		}
 	}
 
+	//Método para eliminar aulas
 	public function EliminarAulas()
 	{
 		$id=$this->uri->segment(3);

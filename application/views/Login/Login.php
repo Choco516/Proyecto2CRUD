@@ -15,32 +15,34 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
-</script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
-</script>
-<![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
+    </script>
+    <![endif]-->
     
     <style>
       
         body { 
-  background: url(http://freefever.com/stock/futuristic-city-fondos-colores-del-arcoiris-widescreen-hd-y.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+          background: url(http://freefever.com/stock/futuristic-city-fondos-colores-del-arcoiris-widescreen-hd-y.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
 
-.panel-default {
-opacity: 0.5;
-margin-top:110px;
-}
-.form-group.last { margin-bottom:0px; }
+        .panel-default {
+            opacity: 0.5;
+            margin-top:110px;
+        }
+        .form-group.last { 
+            margin-bottom:0px; 
+        }
 
-#centrado{
-  margin-left: 30%;
-  width:400px;
-}
+        #centrado{
+          margin-left: 30%;
+          width:400px;
+        }
     </style>
     
   </head>
@@ -90,7 +92,7 @@ margin-top:110px;
                     </form>
                 </div>
                 <div class="panel-footer">
-                    No Registrado? <a href="http://localhost/proyecto2CRUD/index.php/Registrarse">Registrate aquí</a></div>
+                    No Registrado? <a href="<?php echo base_url();?>Registrarse">Registrate aquí</a></div>
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@ class Registrarse extends CI_Controller {
 		parent::__construct();
 	}
 
-
+    //Carga la vista para registrarse
 	public function index()
 	{
 		$this->load->view('Registrarse/Index');

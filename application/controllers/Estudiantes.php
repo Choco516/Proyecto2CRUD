@@ -2,6 +2,7 @@
 
 class Estudiantes extends CI_Controller {
 
+	//Carga el modelo y la vista de estudiantes
 	public function index()
 	{
 		$this->load->model("EstudiantesModel");
@@ -10,11 +11,13 @@ class Estudiantes extends CI_Controller {
 		$this->load->view('Estudiantes/Index',$data);
 	}
 
+	//Carga la vista para crear estudiantes
 	public function Crear()
 	{
 		$this->load->view('Estudiantes/Crear');
 	}
 
+	//Método para crear estudiantes
 	public function CrearEstudiantes()
 	{
 		$estudiantes=array(
@@ -36,6 +39,7 @@ class Estudiantes extends CI_Controller {
 		}
 	}
 
+	//Método para cargar el modelo y la vista de editar estudiantes
 	public function Editar()
 	{
 		$id=$this->uri->segment(3);
@@ -44,6 +48,7 @@ class Estudiantes extends CI_Controller {
 		$this->load->view('Estudiantes/Editar',$data);
 	}
 
+	//Método para editar estudiantes
 	public function EditarEstudiantes()
 	{
 		$id=$this->input->post('id'); 
@@ -65,6 +70,7 @@ class Estudiantes extends CI_Controller {
 		}
 	}
 
+	//Método para eliminar estudiantes
 	public function EliminarEstudiantes()
 	{
 		$id=$this->uri->segment(3);

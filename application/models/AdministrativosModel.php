@@ -9,14 +9,11 @@ class AdministrativosModel extends CI_Model
     function __construct()
     {
         
-        //$query = $this->db->get('cliente');
-        // $this->output->append_output(var_dump($query));
-        
     }
     
+    //función para crear administrativos
     public function Crear($administrativos)
     {
-        //$this->output->append_output(var_dump($cliente));
         if ($this->db->insert("administrativos", $administrativos)) {
             return true;
         } else {
@@ -24,12 +21,14 @@ class AdministrativosModel extends CI_Model
         }
     }
     
+    //función para listar administrativos
     public function ListaAdministrativos()
     {
         $query = $this->db->get('administrativos');
         return $query->result_array();
     }
     
+    //función para obtener administrativos
     public function ObtenerAdministrativos($cedula)
     {
         $this->db->where('cédula', $cedula);
@@ -37,6 +36,7 @@ class AdministrativosModel extends CI_Model
         return $query->row();
     }
     
+    //función para editar administrativos
     public function Editar($cedula, $administrativos)
     {
         var_dump($cedula);
@@ -48,6 +48,7 @@ class AdministrativosModel extends CI_Model
         }
     }
     
+    //función para eliminar administrativos
     public function EliminarAdministrativos($cedula)
     {
         var_dump($cedula);

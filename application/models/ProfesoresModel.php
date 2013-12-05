@@ -9,14 +9,11 @@ class ProfesoresModel extends CI_Model
     function __construct()
     {
         
-        //$query = $this->db->get('cliente');
-        // $this->output->append_output(var_dump($query));
-        
     }
     
+    //función para crear profesores
     public function Crear($profesores)
     {
-        //$this->output->append_output(var_dump($cliente));
         if ($this->db->insert("profesores", $profesores)) {
             return true;
         } else {
@@ -24,12 +21,14 @@ class ProfesoresModel extends CI_Model
         }
     }
     
+    //función para listar profesores
     public function ListaProfesores()
     {
         $query = $this->db->get('profesores');
         return $query->result_array();
     }
     
+    //función para obtener profesores
     public function ObtenerProfesores($cedula)
     {
         $this->db->where('Cédula', $cedula);
@@ -37,6 +36,7 @@ class ProfesoresModel extends CI_Model
         return $query->row();
     }
     
+    //función para editar profesores
     public function Editar($cedula, $profesores)
     {
         var_dump($cedula);
@@ -48,6 +48,7 @@ class ProfesoresModel extends CI_Model
         }
     }
     
+    //función para eliminar profesores
     public function EliminarProfesores($cedula)
     {
         var_dump($cedula);

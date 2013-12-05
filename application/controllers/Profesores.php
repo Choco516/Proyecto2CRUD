@@ -6,6 +6,7 @@ class Profesores extends CI_Controller {
 		parent::__construct();
 	}
 
+	//Carga el modelo y la vista de profesores
 	public function index()
 	{
 		$this->load->model("ProfesoresModel");
@@ -14,11 +15,13 @@ class Profesores extends CI_Controller {
 		$this->load->view('Profesores/Index',$data);
 	}
 
+	//Carga la vista para crear profesores
 	public function Crear()
 	{
 		$this->load->view('Profesores/Crear');
 	}
 
+	//Método para crear profesores
 	public function CrearProfesores()
 	{
 		$profesores=array(
@@ -40,6 +43,7 @@ class Profesores extends CI_Controller {
 		}
 	}
 
+	//Método para cargar el modelo y la vista de editar profesores
 	public function Editar()
 	{
 		$cedula=$this->uri->segment(3);
@@ -48,6 +52,7 @@ class Profesores extends CI_Controller {
 		$this->load->view('Profesores/Editar',$data);
 	}
 
+	//Método para editar profesores
 	public function EditarProfesores()
 	{
 		$id=$this->input->post('id'); 
@@ -69,6 +74,7 @@ class Profesores extends CI_Controller {
 		}
 	}
 
+	//Método para eliminar profesores
 	public function EliminarProfesores()
 	{
 		$id=$this->uri->segment(3);
